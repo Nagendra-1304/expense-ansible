@@ -5,6 +5,11 @@
     mysql_root_password: ExpenseApp@
     login_host: mysql.daws81.space
   tasks:
+  - name: install pymysql
+    ansible.builtin.pip:
+      name:
+      - PyMySQL
+
   - name: install MySQL server
     ansible.builtin.package:
       name: mysql-server
